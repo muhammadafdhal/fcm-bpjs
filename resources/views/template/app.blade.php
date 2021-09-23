@@ -32,6 +32,12 @@
 
 
     <link rel="stylesheet" href="{{asset('template/assets/css/style.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('template/jquery.dataTables.min.css')}}">--}}
+{{--    <style>--}}
+{{--        div.dataTables_wrapper {--}}
+{{--            margin-bottom: 3em;--}}
+{{--        }--}}
+{{--    </style>--}}
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -265,6 +271,7 @@
 <script src="{{asset('template/assets/vendors/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{asset('template/assets/vendors/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
 <script src="{{asset('template/assets/js/init-scripts/data-table/datatables-init.js')}}"></script>
+<script src="{{asset('template/assets/js/init-scripts/data-table/datatables-init2.js')}}"></script>
 <script>
     (function ($) {
         "use strict";
@@ -283,6 +290,16 @@
         });
     })(jQuery);
 </script>
+
+{{--<script src="{{asset('template/jquery.dataTables.min.js')}}"></script>--}}
+{{--<script src="{{asset('template/jquery-3.5.1.js')}}"></script>--}}
+
+{{--<script>--}}
+{{--    $(document).ready(function() {--}}
+{{--        $('table.display').DataTable();--}}
+{{--    } );--}}
+{{--</script>--}}
+
 
 </body>
 

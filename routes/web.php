@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\DatasetController;
+use App\Http\Controllers\PerhitunganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
     //load data set
     Route::get('loat_data', [DatasetController::class, 'load'])->name('load_data');
+
+    Route::resource('perhitungan', PerhitunganController::class);
+    Route::get('/pengujian/{id}', [PerhitunganController::class, 'pengujian'])->name('pengujian');
+
+
 });
 
 //Route::get('/dashboard', function () {

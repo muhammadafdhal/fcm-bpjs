@@ -19,4 +19,5 @@ class Bpjs extends Model
         'data_jml_keluarga',
         'data_pekerjaan',
         'data_penghasilan'];
+    protected $hidden = ['created_at', 'updated_at'];
 }
