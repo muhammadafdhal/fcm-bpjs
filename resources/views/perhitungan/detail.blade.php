@@ -1,5 +1,9 @@
 @extends('template.app')
 
+@section('perhitungan')
+    active
+@endsection
+
 @section('content')
 
     <div class="content mt-3">
@@ -8,7 +12,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Fungsi Objektif $ Nilai Error</strong>
+                            <strong class="card-title">Fungsi Objektif & Nilai Error</strong>
                         </div>
                         @if($message = Session::get('success'))
                             <div class="alert alert-success" role="alert">
@@ -19,9 +23,17 @@
                                 {{ $message }}
                             </div>
                         @endif
+
+                        @if($uji == null)
                         <div class="card-body">
-                            <a href="{{route('pengujian', $hasil->hasil_id)}}" class="btn btn-primary btn-sm"><i class="fa fa-star"></i>&nbsp; Pengujian</a>
+                            <a href="{{route('uji', $hasil->hasil_id)}}" class="btn btn-primary btn-sm"><i class="fa fa-star"></i>&nbsp; Pengujian</a>
                         </div>
+
+                        @else
+                            <div class="card-body">
+                                <a href="{{route('show', $hasil->hasil_id)}}" class="btn btn-primary btn-sm"><i class="fa fa-star"></i>&nbsp;Lihat Pengujian</a>
+                            </div>
+                        @endif
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                 <thead>

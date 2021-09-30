@@ -1,5 +1,13 @@
 @extends('template.app')
 
+@section('dash')
+    Dataset
+@endsection
+
+@section('dataset')
+    active
+@endsection
+
 @section('content')
     <div class="content mt-3">
         <div class="animated fadeIn">
@@ -8,7 +16,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Data Table</strong>
+                            <strong class="card-title">Tabel Dataset</strong>
                         </div>
                         @if($message = Session::get('success'))
                             <div class="alert alert-success" role="alert">
@@ -20,7 +28,7 @@
                             </div>
                         @endif
                         <div class="card-body">
-                            <a href="{{route('load_data')}}" class="btn btn-primary btn-sm"><i class="fa fa-star"></i>&nbsp; Primary</a>
+                            <a href="{{route('load_data')}}" class="btn btn-primary btn-sm"><i class="fa fa-external-link-square"></i>&nbsp; Load Data</a>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">

@@ -1,4 +1,9 @@
 @extends('template.app')
+
+@section('perhitungan')
+    active
+@endsection
+
 @section('content')
 
     <div class="content mt-3">

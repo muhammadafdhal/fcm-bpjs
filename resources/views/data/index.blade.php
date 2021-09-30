@@ -1,5 +1,13 @@
 @extends('template.app')
 
+@section('dash')
+    Data Master
+@endsection
+
+@section('data')
+    active
+@endsection
+
 @section('content')
     <div class="content mt-3">
         <div class="animated fadeIn">
@@ -8,7 +16,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Data Table</strong>
+                            <strong class="card-title">Tabel Data Master</strong>
                         </div>
                         @if($message = Session::get('success'))
                             <div class="alert alert-success" role="alert">
@@ -20,7 +28,7 @@
                             </div>
                         @endif
                         <div class="card-body">
-                            <button type="button" data-toggle="modal" data-target="#import" class="btn btn-primary">Import Data</button>
+                            <button type="button" data-toggle="modal" data-target="#import" class="btn btn-primary"><i class="fa fa-upload"> Import Data</i></button>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">

@@ -1,6 +1,14 @@
 
 @extends('template.app')
 
+@section('dash')
+    Perhitungan
+@endsection
+
+@section('perhitungan')
+    active
+@endsection
+
 @section('content')
     <div class="content mt-3">
         <div class="animated fadeIn">
@@ -9,7 +17,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Data Table</strong>
+                            <strong class="card-title">Tabel Data Perhitungan</strong>
                         </div>
                         @if($message = Session::get('success'))
                             <div class="alert alert-success" role="alert">
@@ -21,7 +29,7 @@
                             </div>
                         @endif
                         <div class="card-body">
-                            <a href="{{route('perhitungan.create')}}" class="btn btn-primary btn-sm"><i class="fa fa-star"></i>&nbsp; Inisialisasi</a>
+                            <a href="{{route('perhitungan.create')}}" class="btn btn-primary btn-sm"><i class="fa fa-cogs"></i>&nbsp; Inisialisasi</a>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">

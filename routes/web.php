@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\DatasetController;
 use App\Http\Controllers\PerhitunganController;
+use App\Http\Controllers\PengujianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,10 +31,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::post('importExcel', [DataController::class, 'import'])->name('importExcel');
 
     //load data set
-    Route::get('loat_data', [DatasetController::class, 'load'])->name('load_data');
+    Route::get('load_data', [DatasetController::class, 'load'])->name('load_data');
 
     Route::resource('perhitungan', PerhitunganController::class);
-    Route::get('/pengujian/{id}', [PerhitunganController::class, 'pengujian'])->name('pengujian');
+    Route::get('/uji/{id}', [PengujianController::class, 'pengujian'])->name('uji');
+    Route::resource('pengujian',PengujianController::class);
+    Route::get('/show/{id}', [PengujianController::class, 'show'])->name('show');
 
 
 });
